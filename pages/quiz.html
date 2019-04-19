@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <title>Quiz Application</title>
+</head>
+<body onload="getKeyForAuth();loadQuestions()">
+    <div id="key-contain" class="container-fluid contain-view valign-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col m10 offset-m1">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Enter Key To Continue</span>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="key" type="text" class="validate">
+                                    <label for="key">Enter Key</label>
+                                </div>
+                                <div class="col s12">
+                                    <p id="keyError"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-action right-align">
+                            <a onclick="showQuiz()" href="JavaScript:void(0)" class="waves-effect waves-light btn">Enter</a>
+                            <!-- <a href="#">This is a link</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="quiz-contain" class="container-fluid valign-wrapper noheight">
+        <div class="container">
+            <div class="row">
+                <div class="col m10 offset-m1 s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <span id="timer"class="right">4 : 00</span>
+                            <span class="card-title">Question:</span>
+                            <p id="question">What is padding used for?</p>
+                                <p class="contain-margin">
+                                    <label>
+                                        <input id="option1Value" class="with-gap" name="group3" type="radio" />
+                                        <span id="option1Text">space</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input id="option2Value" class="with-gap" name="group3" type="radio" />
+                                        <span id="option2Text">margin</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input id="option3Value" class="with-gap" name="group3" type="radio" />
+                                        <span id="option3Text">transition</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input id="option4Value" class="with-gap" name="group3" type="radio" />
+                                        <span id="option4Text">background color</span>
+                                    </label>
+                                </p>
+                            
+                            
+                            <div class="card-action contain-margin right-align">
+                                <span id="quesCount" style="padding:9px;">1 of 12</span>
+                                <a onclick="checkAnswer();showQuestions()" href="JavaScript:void(0)" class="waves-effect waves-light btn">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        M.AutoInit();
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="../js/authenticated.js"></script>
+</body>
+</html>

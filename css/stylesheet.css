@@ -1,0 +1,64 @@
+.card{
+    padding: 10px;
+    /* margin-bottom: 10px; */
+    font-size: 1.1em;
+    /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); */
+}
+/* .card:hover{
+    transition: 0.4s ease all;
+
+} */
+/* .scroll-able{
+    overflow-y: scroll;
+    max-height: 256px;
+} */
+
+.spanText{
+    display: inline-block;
+    vertical-align: sub;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.contain-view{
+    height: 100vh!important;
+    transition: height 0.3s ease;
+    background-color: lavender;
+}
+
+#key{
+    color: white;
+}
+
+.contain-margin{
+    margin-top: 40px!important;
+}
+
+.btn-margin{
+    margin-top: 8px;
+}
+
+.noheight{
+    height: 0px!important;
+    transition: height 0.3s ease;
+    display: none;
+}
+
+.li-padding{
+    padding: 8px;
+    cursor: pointer;
+}
+
+.collapsible-header{
+    justify-content: space-between;
+    padding: 0px;
+    padding: 1rem 1.2rem!important;
+}
+
+.describe{
+    width: 90%;
+    margin: auto;
+}
+
+.info-div{
+    margin: 5px 0px;
+}
